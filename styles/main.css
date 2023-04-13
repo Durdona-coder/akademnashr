@@ -2,8 +2,53 @@
   box-sizing: border-box;
 }
 
-body {
+@font-face {
+  font-display: swap;
   font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-v30-latin-regular.woff2') format('woff2'),
+       url('../fonts/roboto-v30-latin-regular.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/roboto-v30-latin-500.woff2') format('woff2'),
+       url('../fonts/roboto-v30-latin-500.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/roboto-v30-latin-700.woff2') format('woff2'),
+       url('../fonts/roboto-v30-latin-700.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-condensed-v25-latin-regular.woff2') format('woff2'),
+       url('../fonts/roboto-condensed-v25-latin-regular.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/roboto-condensed-v25-latin-700.woff2') format('woff2'),
+       url('../fonts/roboto-condensed-v25-latin-700.woff') format('woff');
+}
+
+body {
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -38,6 +83,14 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
   height: 60px;
 }
 
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logo:active {
+  opacity: 0.6;
+}
+
 .nav-list {
   display: flex;
   align-items: center;
@@ -61,6 +114,14 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
   border-radius: 4px;
 }
 
+.link:hover {
+  opacity: 0.8;
+}
+
+.link:active {
+  opacity: 0.6;
+}
+
 .nav-link {
   text-decoration: none;
   font-weight: 500;
@@ -69,6 +130,29 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #000000;
+  transition: color 0.4s ease;
+}
+
+.nav-link:hover {
+  color: #ff7500;
+}
+
+.nav-link:active {
+  opacity: 0.6;
+}
+
+.active-link {
+  color: #ff7500;
+  padding-bottom: 4px;
+  border-bottom: 3px solid #ff7500;
+}
+
+.active-link:hover {
+  opacity: 0.8;
+}
+
+.active-link:active {
+  opacity: 0.6;
 }
 
 .hero-section {
@@ -79,6 +163,7 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 40px;
 }
 
 .hero-content {
@@ -98,6 +183,7 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
 }
 
 .hero-heading {
+  font-family: "Roboto Condensed";
   font-weight: 700;
   font-size: 40px;
   line-height: 48px;
@@ -113,7 +199,7 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
   height: 510px;
   filter: drop-shadow(24px 24px 0px rgba(255, 117, 0, 0.6));
   border-radius: 8px;
-  margin-top: 40px;
+  margin-bottom: -62px;
 }
 
 .features-section {
@@ -126,6 +212,7 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
 }
 
 .features-heading {
+  font-family: "Roboto Condensed";
   margin-bottom: 72px;
   width: 435px;
   font-weight: 700;
@@ -153,6 +240,7 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
 }
 
 .feature-title {
+  font-family: "Roboto Condensed";
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
@@ -168,6 +256,7 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 64px;
 }
 
 .sale-content {
@@ -176,6 +265,7 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
 }
 
 .sale-heading {
+  font-family: "Roboto Condensed";
   font-weight: 700;
   font-size: 40px;
   line-height: 48px;
@@ -199,7 +289,7 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
   width: 440px;
   height: 440px;
   border-radius: 12px;
-  /* margin-bottom: 64px; */
+  margin-top: -85px;
 }
 
 .footer {
@@ -225,6 +315,19 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
   margin-right: 16px;
 }
 
+.media-link {
+  color: #000;
+  transition: color 0.4s ease;
+}
+
+.media-link:hover {
+  color:#ff7500;
+}
+
+.media-link:active {
+  opacity: 0.6;
+}
+
 .footer-links {
   display: flex;
   justify-content: space-between;
@@ -241,4 +344,13 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
 .links-item a {
   text-decoration: none;
   color: #252420;
+  transition: color 0.4s ease;
+}
+
+.links-item a:hover {
+  color: #ff7500;
+}
+
+.links-item a:active {
+  opacity: 0.6;
 }
