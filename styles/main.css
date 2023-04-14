@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: 2px dotted #ff7500;
+  outline-offset: 4px;
+}
+
 @font-face {
   font-display: swap;
   font-family: 'Roboto';
