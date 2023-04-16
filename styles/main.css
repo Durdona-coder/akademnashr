@@ -75,6 +75,10 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
   padding: 0;
 }
 
+img {
+  display: block;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -320,7 +324,12 @@ h1, h2, h3, h4, h5, h6, ul, li, p {
   margin-right: 16px;
 }
 
+.media-item a {
+  display: block;
+}
+
 .media-link {
+  display: block;
   color: #000;
   transition: color 0.4s ease;
 }
