@@ -103,11 +103,12 @@ img {
 .nav-list {
   display: flex;
   align-items: center;
+  list-style-type: none;
+  margin-right: 32px;
 }
 
-.nav-item {
-  list-style-type: none;
-  margin-right: 20px;
+.nav-item:not(:last-of-type) {
+  margin-right: 32px;
 }
 
 .link {
